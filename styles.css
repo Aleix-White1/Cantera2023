@@ -1,0 +1,138 @@
+@font-face{
+  font-family: "Ticking Timebomb";
+  src: url(./fonts/TickingTimebombBB.ttf);
+}
+html, body {
+  height: 100%;
+}
+body {
+    background-image: url(./img/zyro-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a, p, .ul, td{
+    font-family: "Ticking Timebomb";
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#a_navbar{
+  font-family: "Ticking Timebomb";
+  color:white;
+  font-size: 20px;
+
+}
+div{
+  margin:auto;
+}
+
+  table, th, tr, td {
+    font-family: "Ticking Timebomb";
+    color: rgb(255, 255, 255); /*Color del resulat del scanner*/
+    text-align: center;
+    padding: 10px;
+    padding-left: 30px;
+
+  }
+  div.centraTabla{
+    text-align: center;
+    margin-top: 50px;
+    }
+    
+    div.centraTabla table {
+    margin: 0 auto;
+    text-align: left;
+    }
+.scanner{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+
+}
+#boton_navbar{
+  cursor: pointer;
+        border: 0.1px solid black;
+        background-color: transparent;
+        color: white;
+        font-size: 0.7em;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+
+}
+#button_tabla{
+  cursor: pointer;
+        border: 0.1px solid black;
+        background-color: transparent;
+        color: white;
+        font-size: 0.7em;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+function timerUpdate(minutes, id, endTime2){
+  clearInterval(timerInterval);
+  var currentTime = new Date().getTime();
+
+  // Calcula la cantidad de tiempo restante en milisegundos
+  var timeLeft = endTime2 - currentTime;
+
+  // Calcula la cantidad de días, horas, minutos y segundos restantes
+  var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var min = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  min = parseFloat(min) + parseFloat(minutes);
+
+  if (min < 60){
+    var minutesForm = Math.floor(min - 60);
+    console.log(minutesForm);
+    hours++;
+  }
+
+  // Actualiza el elemento HTML con la cantidad de tiempo restante
+  id.innerHTML = days + "d " + hours + "h " + minutesForm + "m " + seconds + "s ";
+
+  // Si el temporizador llega a cero, muestra un mensaje de tiempo expirado
+  if (timeLeft < 0) {
+      clearInterval(timerInterval);
+      id.innerHTML = "Tiempo expirado";
+  }
+  
+
+}
+function modTimer(){
+  var IDaModificar = document.getElementById("nombre").value; // Obtiene el valor el input ID
+  var tiempo = document.getElementById("tiempo").value; // Obtiene el valor del input Tiempo
+
+  var endTime2 = new Date().getTime() + (4 * 24 * 60 * 60 * 1000);
+
+  var TiempoAnterior = document.getElementById(IDaModificar); //valor del span
+   timerInterval2 = setInterval(function() {
+    timerUpdate(tiempo, TiempoAnterior, endTime2);
+    
+}, 1000);
+
+
+
+}
+
+const inputMinutos = document.getElementById("tiempo");
+  inputMinutos.addEventListener("change", function() {
+    actualizarTemporizador();*/

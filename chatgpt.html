@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Botón para cambiar temporizador</title>
+  </head>
+  <body>
+    <input type="text" id="codigo">
+    <button onclick="cambiarTemporizador()">Acceder</button>
+
+    <table>
+      <tr>
+        <td>Temporizador:</td>
+        <td id="temporizador">00:00</td>
+      </tr>
+    </table>
+
+    <script>
+      function cambiarTemporizador() {
+        var codigo = document.getElementById("codigo").value;
+        if (codigo === "salvacion") {
+          var temporizador = document.getElementById("temporizador");
+          var tiempo = temporizador.innerHTML;
+          var minutos = parseInt(tiempo.split(":")[0]);
+          var segundos = parseInt(tiempo.split(":")[1]);
+          var tiempoTotal = minutos * 60 + segundos;
+          var intervalo = setInterval(function() {
+            tiempoTotal++;
+            var nuevoMinutos = Math.floor(tiempoTotal / 60);
+            var nuevoSegundos = tiempoTotal % 60;
+            var nuevoTiempo = nuevoMinutos.toString().padStart(2, "0") + ":" + nuevoSegundos.toString().padStart(2, "0");
+            temporizador.innerHTML = nuevoTiempo;
+          }, 1000);
+        } else {
+          alert("Código incorrecto");
+        }
+      }
+    </script>
+  </body>
+</html>
